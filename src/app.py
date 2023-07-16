@@ -27,7 +27,7 @@ def smoothen(Z,smoothness=1,k=5,rep=5):
 app = dash.Dash(__name__)
 server = app.server
 
-directory = './data/ALL CSV FILES'
+directory = '../data/ALL CSV FILES'
 csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
 dataframes = [pd.read_csv(os.path.join(directory, file),header=0, index_col=0) for file in csv_files]
 for j in range(15,17):
