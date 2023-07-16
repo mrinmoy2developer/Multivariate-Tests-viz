@@ -1,8 +1,6 @@
 import pandas as pd
 from plotly import express as px,graph_objs as go,colors
 from dash import Dash, html, dcc, callback, Output, Input
-import dash_core_components as dcc
-import dash_html_components as html
 import dash,os
 import numpy as np
 from scipy.signal import convolve2d
@@ -151,5 +149,4 @@ def update_surface(selected_plots,k,std,rep):
     return fig
 
 if __name__ == '__main__':
-    
-    app.run_server(port=8080)
+    app.run_server(debug=1)
