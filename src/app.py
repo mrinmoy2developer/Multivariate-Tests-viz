@@ -30,10 +30,10 @@ server = app.server
 directory = '../data/ALL CSV FILES'
 csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
 dataframes = [pd.read_csv(os.path.join(directory, file),header=0, index_col=0) for file in csv_files]
-for j in range(15,17):
-    dataframes[j].index=[f'Dim {i}' for i in dataframes[j].index]
-    dataframes[j].columns=[f'del={float(i)/dataframes[j].shape[1]}' for i in dataframes[j].columns]
-    dataframes[j]/=1000
+# for j in range(15,17):
+#     dataframes[j].index=[f'Dim {i}' for i in dataframes[j].index]
+#     dataframes[j].columns=[f'del={float(i)/dataframes[j].shape[1]}' for i in dataframes[j].columns]
+#     dataframes[j]/=1000
 # cols=list(colors.PLOTLY_SCALES.keys())
 cols=['Viridis','Plasma','Electric','Rainbow','Picnic','Blues','Portland','Hot','Blackbody','Jet','Greys','YlGnBu','Bluered','RdBu','YlOrRd']
 marks=['#106644','purple','#ebb644','red','pink','blue','cyan','magenta','grey','yellow','brown','green','fawn','black','orange','neno']
